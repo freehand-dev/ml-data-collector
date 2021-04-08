@@ -2,7 +2,7 @@
 > MlDataCollector - The simple data collector based on ASP.NET core Web API. Used to collect(categorization) data for Machine Learning.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-brightgreen.svg)](COPYING)
-[![Build Status](https://dev.azure.com/oleksandr-nazaruk/openprocurement-agent/_apis/build/status/openprocurement-agent-CI)](https://dev.azure.com/oleksandr-nazaruk/openprocurement-agent/_apis/build/status/openprocurement-agent-CI)
+[![Build Status](https://dev.azure.com/oleksandr-nazaruk/ml-data-collector/_apis/build/status/freehand-dev.ml-data-collector)](https://dev.azure.com/oleksandr-nazaruk/ml-data-collector/_apis/build/status/freehand-dev.ml-data-collector)
 
 
 ## Compile and install

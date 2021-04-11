@@ -17,11 +17,9 @@ namespace ml_data_collector
 {
     public class Startup
     {
-        private readonly IWebHostEnvironment _env;
-        public Startup(IConfiguration configuration, IWebHostEnvironment env)
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            _env = env;
         }
 
         public IConfiguration Configuration { get; }
@@ -38,18 +36,11 @@ namespace ml_data_collector
             services.AddDbContext<Models.MlDataCollectorDBContexts>(options =>
                                 options.UseSqlite($"Data Source=\"{System.IO.Path.Combine(workingDirectory, "ml-data-collector.db")}\""));
 
-            services.AddCors(opt => {
-                opt.AddPolicy("CorsPolicy", policy => {
-                    policy
-                    .AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader();
-                });
-            });
-
+            services.AddCors();
 
             services.AddControllers();
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.FileProviders;
+using ml_data_collector.Extensions;
 
 namespace ml_data_collector
 {
@@ -36,7 +37,7 @@ namespace ml_data_collector
             services.AddDbContext<Models.MlDataCollectorDBContexts>(options =>
                                 options.UseSqlite($"Data Source=\"{System.IO.Path.Combine(workingDirectory, "ml-data-collector.db")}\""));
 
-            services.AddCors();
+            services.ConfigureCors();
 
             services.AddControllers();
         }
